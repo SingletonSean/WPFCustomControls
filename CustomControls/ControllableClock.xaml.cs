@@ -33,5 +33,21 @@ namespace AnalogClockControl.CustomControls
         {
             InitializeComponent();
         }
+
+        private void ClockType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (cbClockType.SelectedValue.ToString())
+            {
+                case "Analog":
+                    Clock = new AnalogClock();
+                    break;
+                case "Digital":
+                    Clock = new DigitalClock()
+                    {
+                        FontSize = 36
+                    };
+                    break;
+            }
+        }
     }
 }
