@@ -7,7 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 
-namespace AnalogClockControl.CustomControls
+namespace CustomControls.Controls
 {
     [TemplateVisualState(Name = "Day", GroupName = "TimeStates")]
     [TemplateVisualState(Name = "Night", GroupName = "TimeStates")]
@@ -15,37 +15,7 @@ namespace AnalogClockControl.CustomControls
     public class Clock : Control
     {
         public static readonly DependencyProperty TimeProperty = DependencyProperty.Register("Time", typeof(DateTime), typeof(Clock), 
-            new PropertyMetadata(DateTime.Now, TimePropertyChanged, TimeCoerceValue));
-
-        private static object TimeCoerceValue(DependencyObject d, object baseValue)
-        {
-            if(baseValue is DateTime)
-            {
-                DateTime time = (DateTime)baseValue;
-
-                if(time.Second % 2 == 1)
-                {
-                    baseValue = time.AddSeconds(1);
-                }
-            }
-
-            return baseValue;
-        }
-
-        private static bool TimeValidateValue(object value)
-        {
-            if(value is DateTime)
-            {
-                DateTime time = (DateTime)value;
-
-                if(time.Second % 2 == 1)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
+            new PropertyMetadata(DateTime.Now, TimePropertyChanged));
 
         private static void TimePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

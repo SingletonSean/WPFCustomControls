@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:AnalogClockControl.CustomControls">
+                    xmlns:local="clr-namespace:CustomControls.Controls">
     <Style TargetType="local:DigitalClock">
         <Setter Property="Template">
             <Setter.Value>
@@ -11,7 +11,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Time.Hour, RelativeSource={RelativeSource TemplatedParent}}"/>
                         <TextBlock x:Name="PART_Colon" Text=":"/>
-                        <TextBlock Text="{Binding Time.Minute, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <TextBlock Text="{Binding Time.Minute, StringFormat=D2, RelativeSource={RelativeSource TemplatedParent}}"/>
                         <TextBlock Text=":" Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <TextBlock Text="{Binding Time.Second, StringFormat=D2, RelativeSource={RelativeSource TemplatedParent}}"
                                    Visibility="{TemplateBinding ShowSeconds, Converter={StaticResource BooleanToVisibilityConverter}}"/>

@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:AnalogClockControl.Themes">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/CustomControls/AnalogClockStyle.xaml"/>
-        <ResourceDictionary Source="/CustomControls/DigitalClockStyle.xaml"/>
+        <ResourceDictionary Source="/Controls/AnalogClockStyle.xaml"/>
+        <ResourceDictionary Source="/Controls/DigitalClockStyle.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

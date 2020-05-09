@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace AnalogClockControl.CustomControls
+namespace CustomControls.Controls
 {
     [TemplatePart(Name = "PART_HourHand", Type = typeof(Line))]
     [TemplatePart(Name = "PART_MinuteHand", Type = typeof(Line))]

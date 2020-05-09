@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AnalogClockControl.CustomControls
+namespace CustomControls.Controls
 {
     /// <summary>
     /// Interaction logic for ControllableClock.xaml

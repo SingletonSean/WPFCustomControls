@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnalogClockControl.Properties
+namespace CustomControls.Properties
 {
 
 

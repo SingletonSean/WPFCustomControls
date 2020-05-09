@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AnalogClockControl.CustomControls
+namespace CustomControls.Controls
 {
     [TemplatePart(Name = "PART_Colon", Type = typeof(UIElement))]
     public class DigitalClock : Clock

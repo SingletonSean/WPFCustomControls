@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F7B56F7D-F1FC-4B95-AFCD-854963FA20C7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AnalogClockControl</RootNamespace>
-    <AssemblyName>AnalogClockControl</AssemblyName>
+    <RootNamespace>CustomControls</RootNamespace>
+    <AssemblyName>CustomControls</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,17 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CustomControls\AnalogClockStyle.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Controls\AnalogClockStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="CustomControls\ControllableClock.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Controls\ControllableClock.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="CustomControls\DigitalClockStyle.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Controls\DigitalClockStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -75,12 +75,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CustomControls\AnalogClock.cs" />
-    <Compile Include="CustomControls\Clock.cs" />
-    <Compile Include="CustomControls\ControllableClock.xaml.cs">
+    <Compile Include="Converters\DivisionConverter.cs" />
+    <Compile Include="Converters\GreaterThanMultiConverter.cs" />
+    <Compile Include="Controls\AnalogClock.cs" />
+    <Compile Include="Controls\Clock.cs" />
+    <Compile Include="Controls\ControllableClock.xaml.cs">
       <DependentUpon>ControllableClock.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\DigitalClock.cs" />
+    <Compile Include="Controls\DigitalClock.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -116,5 +118,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
